@@ -116,7 +116,7 @@ class BitcoinWallet(Wallet):
                    'cwd': self.wallet_dir, 'portable': False, 'password': '',
                    'wallet_path': os.path.join('wallet', self.wallet_file)}
         if self.TESTNET:
-            options['server'] = 'electrum.akinbo.org:51002:s'
+            options['server'] = 'testnet1.bauerj.eu:50002:s'
         config = SimpleConfig(options)
         fd, _ = self.get_daemon().get_fd_or_server(config)
 
